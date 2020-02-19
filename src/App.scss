@@ -1,0 +1,115 @@
+$primary: #7faae4;
+$secondary: #834db7;
+$tertiary: #34283f;
+$grey: #b0b0b0;
+
+html {
+  height: 100%;
+  background-color: $grey;
+}
+
+.app {
+  background-color: $grey;
+  padding: 0 10rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Helvetica Neue';
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .primary {
+    color: $primary;
+  }
+
+  .secondary {
+    color: $secondary;
+  }
+
+  .tertiary {
+    color: $tertiary;
+  }
+
+  .grey {
+    color: $grey;
+  }
+
+  .header {
+    background-color: white;
+    border-radius: 0 0 0.4rem 0.4rem;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+    h3 {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+    .card-results {
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+        0 15px 12px rgba(0, 0, 0, 0.22);
+      border-radius: 0.4rem;
+      background-color: white;
+      display: flex;
+      min-height: 9rem;
+      img {
+        clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+        max-width: 6rem;
+        border-radius: 0.4rem 0 0 0.4rem;
+      }
+      .card-info {
+        padding: 1rem;
+        width: 100%;
+        position: relative;
+        .bottom {
+          position: absolute;
+          bottom: 0;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  .search {
+    input {
+      width: 100%;
+      box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3),
+        0 15px 12px rgba(0, 0, 0, 0.22);
+      border: none;
+      background: url(https://fonts.gstatic.com/s/i/materialicons/search/v4/24px.svg)
+        white no-repeat right;
+      padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+      border-radius: 0.4rem;
+      outline: none;
+      margin: 2rem 0;
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 374px) {
+  .app {
+    padding: 0 1rem;
+    .card-results {
+      max-width: 18rem;
+    }
+  }
+}
+
+@media (min-width: 375px) and (max-width: 1023px) {
+  .app {
+    padding: 0 1rem;
+  }
+}
